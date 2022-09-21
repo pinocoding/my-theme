@@ -1,0 +1,19 @@
+<div class="header-logo">
+  <p-menubar [model]="items">
+    <ng-template pTemplate="start">
+      <i class="fa-facebook-f"></i>
+    </ng-template>
+    <ng-template>
+      <div class="header-log-items">Maktub</div>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <button
+        pButton
+        type="button"
+        icon="pi pi-search"
+        iconPos="right"
+        class="p-button-raised p-button-rounded"
+      ></button>
+    </ng-template>
+  </p-menubar>
+</div>

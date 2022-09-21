@@ -1,0 +1,12 @@
+:host ::ng-deep .header-wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-top: 70px
+}
+
+:host ::ng-deep.p-menubar {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
