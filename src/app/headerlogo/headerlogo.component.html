@@ -1,19 +1,32 @@
-<div class="header-logo">
-  <p-menubar [model]="items">
-    <ng-template pTemplate="start">
-      <i class="fa-facebook-f"></i>
-    </ng-template>
-    <ng-template>
-      <div class="header-log-items">Maktub</div>
-    </ng-template>
-    <ng-template pTemplate="end">
+<div class="card" style="max-width: 1240px; margin: 5px auto">
+  <div
+    class="flex flex-wrap md:justify-content-between justify-content-center card-container"
+  >
+    <div class="flex align-items-center justify-content-center">
+      <div class="flex align-items-center justify-content-center">
+        <i class="fa-brands fa-facebook-f"></i>
+      </div>
+    </div>
+    <div
+      class="font-bold flex align-items-center justify-content-center"
+      style="font-size: 60px; color: #4b4870"
+    >
+      <span style="color: #ff4c60">M</span>aktub
+    </div>
+    <div class="text-white flex align-items-center justify-content-center">
       <button
         pButton
-        type="button"
         icon="pi pi-search"
-        iconPos="right"
+        type="button"
         class="p-button-raised p-button-rounded"
+        style="
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          background-color: #ff4c60;
+          border: none;
+        "
       ></button>
-    </ng-template>
-  </p-menubar>
+    </div>
+  </div>
 </div>
