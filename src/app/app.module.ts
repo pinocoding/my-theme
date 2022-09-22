@@ -25,6 +25,9 @@ import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RippleModule } from 'primeng/ripple';
 import { TabViewModule } from 'primeng/tabview';
+import { ArticlecartComponent } from './articlecart/articlecart.component';
+import { TitleComponent } from './title/title.component';
+import { ArtinforComponent } from './artinfor/artinfor.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { TabViewModule } from 'primeng/tabview';
     FooterComponent,
     SubcribeComponent,
     FooterbotComponent,
+    ArticlecartComponent,
+    TitleComponent,
+    ArtinforComponent,
   ],
   imports: [
     BrowserModule,
