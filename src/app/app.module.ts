@@ -15,6 +15,16 @@ import { CarouselModule } from 'primeng/carousel';
 import { CarouselComponent } from './carousel/carousel.component';
 import { ToastModule } from 'primeng/toast';
 import { ProductService } from './carousel/productservice';
+import { FooterComponent } from './footer/footer.component';
+import { SubcribeComponent } from './subcribe/subcribe.component';
+import { FooterbotComponent } from './footerbot/footerbot.component';
+
+import { InputTextModule } from 'primeng/inputtext';
+
+import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { RippleModule } from 'primeng/ripple';
+import { TabViewModule } from 'primeng/tabview';
 
 @NgModule({
   declarations: [
@@ -23,6 +33,9 @@ import { ProductService } from './carousel/productservice';
     HeaderlogoComponent,
     HeadernavComponent,
     CarouselComponent,
+    FooterComponent,
+    SubcribeComponent,
+    FooterbotComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +48,11 @@ import { ProductService } from './carousel/productservice';
     ToastModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    CheckboxModule,
+    RadioButtonModule,
+    RippleModule,
+    TabViewModule,
+    InputTextModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],

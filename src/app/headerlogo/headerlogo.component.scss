@@ -1,0 +1,8 @@
+:host ::ng-deep.onhover-one {
+  transition: 0.3s;
+  &:hover {
+    cursor: pointer;
+    margin-bottom: 7px;
+    display: inline-block;
+  }
+}

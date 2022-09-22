@@ -1,14 +1,37 @@
-.product-item {
+:host ::ng-deep.product-item {
+  position: relative;
+
   .product-item-content {
-    border: 1px solid var(--surface-d);
-    border-radius: 3px;
-    margin: 0.3rem;
     text-align: center;
-    padding: 2rem 0;
   }
 
   .product-image {
     width: 100%;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .product-item-content-bottom {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+
+    .product-item-content-infor {
+      margin: auto auto;
+      padding: 25px 40px;
+      text-align: center;
+    }
+  }
+}
+
+:host ::ng-deep .p-carousel {
+  .p-carousel-indicators {
+    display: none;
+  }
+  .p-carousel-prev,
+  .p-carousel-next {
+    position: absolute;
+    z-index: 1;
   }
 }

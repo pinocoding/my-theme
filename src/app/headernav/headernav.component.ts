@@ -13,8 +13,9 @@ export class HeadernavComponent implements OnInit {
   ngOnInit() {
     this.items = [
       {
-        label: 'Videos',
-        icon: 'pi pi-fw pi-video',
+        label: 'Home',
+        class: 'home-list',
+
         items: [
           [
             {
@@ -39,8 +40,8 @@ export class HeadernavComponent implements OnInit {
         ],
       },
       {
-        label: 'Users',
-        icon: 'pi pi-fw pi-users',
+        label: 'Header Styles',
+
         items: [
           [
             {
@@ -75,8 +76,84 @@ export class HeadernavComponent implements OnInit {
         ],
       },
       {
-        label: 'Events',
-        icon: 'pi pi-fw pi-calendar',
+        label: 'Post Features',
+
+        items: [
+          [
+            {
+              label: 'User 1',
+              items: [{ label: 'User 1.1' }, { label: 'User 1.2' }],
+            },
+            {
+              label: 'User 2',
+              items: [{ label: 'User 2.1' }, { label: 'User 2.2' }],
+            },
+          ],
+          [
+            {
+              label: 'User 3',
+              items: [{ label: 'User 3.1' }, { label: 'User 3.2' }],
+            },
+            {
+              label: 'User 4',
+              items: [{ label: 'User 4.1' }, { label: 'User 4.2' }],
+            },
+          ],
+          [
+            {
+              label: 'User 5',
+              items: [{ label: 'User 5.1' }, { label: 'User 5.2' }],
+            },
+            {
+              label: 'User 6',
+              items: [{ label: 'User 6.1' }, { label: 'User 6.2' }],
+            },
+          ],
+        ],
+      },
+      {
+        label: '#Tag',
+
+        items: [
+          [
+            {
+              label: 'User 1',
+              items: [{ label: 'User 1.1' }, { label: 'User 1.2' }],
+            },
+            {
+              label: 'User 2',
+              items: [{ label: 'User 2.1' }, { label: 'User 2.2' }],
+            },
+          ],
+          [
+            {
+              label: 'User 3',
+              items: [{ label: 'User 3.1' }, { label: 'User 3.2' }],
+            },
+            {
+              label: 'User 4',
+              items: [{ label: 'User 4.1' }, { label: 'User 4.2' }],
+            },
+          ],
+          [
+            {
+              label: 'User 5',
+              items: [{ label: 'User 5.1' }, { label: 'User 5.2' }],
+            },
+            {
+              label: 'User 6',
+              items: [{ label: 'User 6.1' }, { label: 'User 6.2' }],
+            },
+          ],
+        ],
+      },
+      {
+        label: 'Author',
+      },
+
+      {
+        label: 'Features',
+
         items: [
           [
             {
@@ -101,30 +178,7 @@ export class HeadernavComponent implements OnInit {
         ],
       },
       {
-        label: 'Settings',
-        icon: 'pi pi-fw pi-cog',
-        items: [
-          [
-            {
-              label: 'Setting 1',
-              items: [{ label: 'Setting 1.1' }, { label: 'Setting 1.2' }],
-            },
-            {
-              label: 'Setting 2',
-              items: [{ label: 'Setting 2.1' }, { label: 'Setting 2.2' }],
-            },
-            {
-              label: 'Setting 3',
-              items: [{ label: 'Setting 3.1' }, { label: 'Setting 3.2' }],
-            },
-          ],
-          [
-            {
-              label: 'Technology 4',
-              items: [{ label: 'Setting 4.1' }, { label: 'Setting 4.2' }],
-            },
-          ],
-        ],
+        label: 'Contact',
       },
     ];
   }
