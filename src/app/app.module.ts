@@ -26,8 +26,13 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { RippleModule } from 'primeng/ripple';
 import { TabViewModule } from 'primeng/tabview';
 import { ArticlecartComponent } from './articlecart/articlecart.component';
-import { TitleComponent } from './title/title.component';
-import { ArtinforComponent } from './artinfor/artinfor.component';
+import { TitleComponent } from './common/title/title.component';
+import { ArtinforComponent } from './common/artinfor/artinfor.component';
+import { TagcloudComponent } from './tagcloud/tagcloud.component';
+import { TagcloudTagComponent } from './common/tagcloud-tag/tagcloud-tag.component';
+import { FollowmeComponent } from './followme/followme.component';
+import { AboutmeComponent } from './aboutme/aboutme.component';
+import { AboutmeinfoComponent } from './aboutmeinfo/aboutmeinfo.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +47,11 @@ import { ArtinforComponent } from './artinfor/artinfor.component';
     ArticlecartComponent,
     TitleComponent,
     ArtinforComponent,
+    TagcloudComponent,
+    TagcloudTagComponent,
+    FollowmeComponent,
+    AboutmeComponent,
+    AboutmeinfoComponent,
   ],
   imports: [
     BrowserModule,

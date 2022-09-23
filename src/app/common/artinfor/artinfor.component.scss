@@ -1,0 +1,12 @@
+:host ::ng-deep .art-info {
+  display: flex;
+  width: 100%;
+
+  .art-left {
+    max-width: 60px;
+
+    .art-img {
+      object-fit: cover;
+    }
+  }
+}

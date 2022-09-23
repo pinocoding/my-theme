@@ -6,7 +6,5 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footerbot.component.scss'],
 })
 export class FooterbotComponent implements OnInit {
-  constructor() {}
-
   ngOnInit(): void {}
 }
