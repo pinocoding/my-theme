@@ -1,30 +1,70 @@
-:host ::ng-deep.p-megamenu {
-  padding: 0 15px;
-  background: #fff;
-  -webkit-box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 7%);
-  box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 7%);
-  border: none;
+:host ::ng-deep :host ::ng-deep.pi {
+  font-size: 20px;
+}
 
-  .p-megamenu-root-list {
-    .p-menuitem {
-      .p-menuitem-link {
-        margin-right: 10px;
-        padding-right: 15px;
-        padding: 15px 0px 13px 15px !important;
+:host ::ng-deep.header-nav {
+  max-width: 1240px;
+  margin: 30px auto;
+  .p-menubar {
+    padding: 0 15px;
+    background: #fff;
+    -webkit-box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 7%);
+    box-shadow: 0px 2px 3px 0px rgb(0 0 0 / 7%);
+    border: none;
+
+    .p-menubar-root-list {
+      .p-menuitem {
+        .p-menuitem-link {
+          margin-right: 10px;
+          padding-right: 15px;
+          padding: 15px 13px !important;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        .p-menuitem-link:not(.p-disabled) {
+          &:hover {
+            background-color: transparent;
+          }
+        }
+        .p-menuitem-link:focus {
+          box-shadow: inset 0 0 0 0.15rem transparent;
+        }
+      }
+      .p-menuitem-active {
+        .p-menuitem-link {
+          .p-menubar {
+            .p-menubar-root-list {
+              .p-menuitem {
+                .p-menuitem-active {
+                  .p-menuitem-link {
+                    background-color: transparent;
+                  }
+                  .p-menuitem-link:not(.p-disabled) {
+                    &:hover {
+                      background-color: transparent;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .p-menuitem-text {
+      font-size: 15px;
+      line-height: 1.25;
+      position: relative;
+      z-index: 1;
+      color: #4b4870 !important;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+
+      &:hover {
+        color: red !important;
       }
     }
   }
-  .p-menuitem-text {
-    font-size: 15px;
-    line-height: 1.25;
-    position: relative;
-    z-index: 1;
-    color: #4b4870 !important;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
-}
-
-:host ::ng-deep.pi {
-  font-size: 14px;
 }

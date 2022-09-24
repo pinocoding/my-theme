@@ -5,3 +5,25 @@
 
   line-height: 1.5;
 }
+
+// hoverstyle
+:host ::ng-deep .buttontransform {
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    -webkit-transform: translateY(-5px) !important;
+    transform: translateY(-5px) !important;
+  }
+}
+:host ::ng-deep .imgtransform {
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    transition: all 0.3s ease;
+    -webkit-transform: translate(-62%, -62%) !important;
+    transform: translate(-59%, -62%) !important;
+  }
+}
