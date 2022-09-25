@@ -33,6 +33,14 @@ import { TagcloudTagComponent } from './common/tagcloud-tag/tagcloud-tag.compone
 import { FollowmeComponent } from './followme/followme.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { AboutmeinfoComponent } from './aboutmeinfo/aboutmeinfo.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ArticlesideComponent } from './articleside/articleside.component';
+
+import { SocialsideComponent } from './socialside/socialside.component';
+import { AdvertisingsideComponent } from './advertisingside/advertisingside.component';
+import { BannerComponent } from './banner/banner.component';
+import { TagcloudsideComponent } from './tagcloudside/tagcloudside.component';
+import { TagcloudsideitemComponent } from './common/tagcloudsideitem/tagcloudsideitem.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +60,14 @@ import { AboutmeinfoComponent } from './aboutmeinfo/aboutmeinfo.component';
     FollowmeComponent,
     AboutmeComponent,
     AboutmeinfoComponent,
+    SidebarComponent,
+    ArticlesideComponent,
+
+    SocialsideComponent,
+    AdvertisingsideComponent,
+    BannerComponent,
+    TagcloudsideComponent,
+    TagcloudsideitemComponent,
   ],
   imports: [
     BrowserModule,

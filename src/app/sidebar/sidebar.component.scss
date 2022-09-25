@@ -1,0 +1,8 @@
+:host ::ng-deep .sidebar {
+  width: 100%;
+}
+
+:host ::ng-deep .test {
+  padding: 0 20px;
+  display: block !important;
+}
