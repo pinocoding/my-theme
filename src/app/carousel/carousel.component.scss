@@ -7,7 +7,7 @@
 
   .product-image {
     width: 100%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
   }
 
   .product-item-content-bottom {
@@ -31,7 +31,34 @@
   }
   .p-carousel-prev,
   .p-carousel-next {
-    position: absolute;
     z-index: 1;
+    width: 2rem;
+    height: 2rem;
+    color: #fff;
+    border: 0 none;
+    background: #ff4c60;
+    border-radius: 50%;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    margin: 0.5rem;
   }
 }
+
+:host ::ng-deep .p-carousel-container {
+  position: relative;
+
+  .p-carousel-prev {
+    position: absolute;
+  }
+
+  .p-carousel-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+
+  }
+}
+
+
+

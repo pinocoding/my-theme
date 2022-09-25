@@ -42,3 +42,30 @@
     transform: translate(-59%, -62%) !important;
   }
 }
+
+:host ::ng-deep .hover-underline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #65ebe7 0%, #65ebe7 100%);
+    opacity: 1;
+
+    // background-size: 100% 0%;
+    // background-position: left 70%;
+    // background-repeat: no-repeat;
+    // padding-bottom: 5px;
+  }
+  &:focus,
+  &:hover {
+    &::after {
+      cursor: pointer;
+      opacity: 1;
+    }
+  }
+}
