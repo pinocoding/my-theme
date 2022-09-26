@@ -14,8 +14,56 @@
     color: #4b4870;
 
     .tag-item-icon {
-      color: red;
       margin-right: 3px;
+    }
+    .yellow-icon {
+      color: #f9b439;
+    }
+    .green-icon {
+      color: #49dfd4;
+    }
+    .red-icon {
+      color: #ff486a;
+    }
+    .blue-icon {
+      color: #3f8cff;
+    }
+    .purple-icon {
+      color: #7171e2;
+    }
+    .trawberry-icon {
+      color: #fb0699;
+    }
+  }
+
+  .hover-yellow {
+    &:hover {
+      color: #f9b439;
+    }
+  }
+  .hover-green {
+    &:hover {
+      color: #49dfd4;
+    }
+  }
+  .hover-red {
+    &:hover {
+      color: #ff486a;
+    }
+  }
+  .hover-blue {
+    &:hover {
+      color: #3f8cff;
+    }
+  }
+  .hover-purple {
+    &:hover {
+      color: #7171e2;
+    }
+  }
+  .hover-trawberry {
+    &:hover {
+      color: #fb0699;
     }
   }
 }
