@@ -3,20 +3,23 @@
     <div
       class="art-img"
       [ngStyle]="{
-        'background-image': 'url(./../../assets/images/product/' + img + ')'
+        'background-image':
+          'url(./../../assets/images/product/' + latestarticle.img + ')'
       }"
     >
       <img
         class="art-imgtest imgtransform"
-        src="../../../assets/images/product/{{ img }}"
+        src="../../../assets/images/product/{{ latestarticle.img }}"
       />
     </div>
   </div>
 
   <div class="art-right" style="padding-left: 10px">
-    <h4 class="art-content-top hover-underline" style="font-size: 15px; color: #454360">
-      <span>{{ text }}</span>
+    <h4 class="art-content-top" style="font-size: 15px; color: #454360">
+      <span class="">{{ latestarticle.title }}</span>
     </h4>
-    <div class="art-content-bottom" style="font-size: 12px">{{ date }}</div>
+    <div class="art-content-bottom" style="font-size: 12px">
+      {{ latestarticle.date }}
+    </div>
   </div>
 </div>

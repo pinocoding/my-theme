@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from './productservice';
-import { Product } from './product';
+import { Product } from '../../models/product';
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
