@@ -9,13 +9,13 @@
 :host ::ng-deep .app {
   background-color: #f9f9f9;
 
-  .container {
+  .body {
     max-width: 1240px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 
-    .container-right {
+    .body-right {
       width: 30%;
     }
   }
@@ -44,26 +44,12 @@
 }
 
 :host ::ng-deep .hover-underline {
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
+  position: relative;
 
-<<<<<<< HEAD
   &:hover {
     cursor: pointer;
     padding-top: 5px;
     background-color: #65ebe7;
     opacity: 1;
-=======
-  background-size: 100% 13%;
-  background-position: left 80%;
-  &:hover {
-    cursor: pointer;
-    padding-bottom: 7px;
-    background-image: linear-gradient(to right, #65ebe7 0%, #65ebe7 100%);
-    background-repeat: no-repeat;
-
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
->>>>>>> c87ee367b042b1b19a759b76822269d9d7ef87e3
   }
 }
