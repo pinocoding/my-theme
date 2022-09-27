@@ -41,6 +41,7 @@ import { AdvertisingsideComponent } from './common/advertisingside/advertisingsi
 import { BannerComponent } from './common/banner/banner.component';
 import { TagcloudsideComponent } from './common/tagcloudside/tagcloudside.component';
 import { TagcloudsideitemComponent } from './common/tagcloudsideitem/tagcloudsideitem.component';
+import { FollowmeitemComponent } from './common/followmeitem/followmeitem.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { TagcloudsideitemComponent } from './common/tagcloudsideitem/tagcloudsid
     BannerComponent,
     TagcloudsideComponent,
     TagcloudsideitemComponent,
+    FollowmeitemComponent,
   ],
   imports: [
     BrowserModule,

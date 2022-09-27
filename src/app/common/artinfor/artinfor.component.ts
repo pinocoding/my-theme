@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { LatestArticle } from '../../models/data.model';
+import { LatestArticle } from '../../models/mockup-data.model';
 @Component({
   selector: 'app-artinfor',
   templateUrl: './artinfor.component.html',

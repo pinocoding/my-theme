@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { TagCloud } from '../../models/data.model';
+import { TagCloud } from '../../models/mockup-data.model';
 @Component({
   selector: 'app-tagclouditem',
   templateUrl: './tagclouditem.component.html',

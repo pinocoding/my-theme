@@ -1,5 +1,10 @@
 <div class="tagcloud-cart">
   <app-title [title]="title"></app-title>
 
-  <app-tagclouditem></app-tagclouditem>
+  <div class="tagcloud-tag">
+    <app-tagclouditem
+      *ngFor="let tagcloud of tagclouds"
+      [tagcloud]="tagcloud"
+    ></app-tagclouditem>
+  </div>
 </div>

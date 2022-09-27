@@ -1,5 +1,5 @@
 :host ::ng-deep .aboutmeinfo-tag {
-  .aboutmeinfor-top {
+  .aboutmeinfo-top {
     display: flex;
     justify-content: flex-start;
     .aboutme-left {
@@ -19,13 +19,18 @@
       }
       .aboutme-right-job {
         font-size: 12px;
+
         color: #596172;
         margin-bottom: 5px;
+      }
+
+      .social-icon {
+        padding-left: 5px;
       }
     }
   }
 
-  .aboutmeinfor-bottm {
+  .aboutmeinfo-bottm {
     margin-top: 15px;
     font-size: 14px;
   }

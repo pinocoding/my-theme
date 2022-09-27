@@ -1,25 +1,20 @@
 <div class="aboutmeinfo-tag">
-  <div class="aboutmeinfor-top">
+  <div class="aboutmeinfo-top">
     <div class="aboutme-left imgtransition buttontransform">
-      <img src="../../assets/images/product/{{ avatar }}" alt="images" />
+      <img
+        src="../../assets/images/product/{{ aboutinfo.avatar }}"
+        alt="images"
+      />
     </div>
 
     <div class="aboutme-right">
-      <p class="aboutme-right-name">Jonathan Doe</p>
-      <p class="aboutme-right-job">Founder & Editor</p>
-      <p class="aboutme-icon">
-        <i class="fa-brands fa-twitter" style="color: #1da1f2"></i>
-        <i
-          class="fa-brands fa-facebook-f"
-          style="color: #175beb; padding: 0 10px"
-        ></i>
-        <i class="fa-solid fa-earth-americas" style="color: red"></i>
-      </p>
+      <p class="aboutme-right-name">{{ aboutinfo.name }}</p>
+      <p class="aboutme-right-job">{{ aboutinfo.job }}</p>
+
+      <span *ngFor="let item of aboutinfo.link">
+        <i class="social-icon" [class]="item.icon" [style]="item.style"></i>
+      </span>
     </div>
   </div>
-  <div class="aboutmeinfor-bottm">
-    Hello! My name is Jonathan Doe working from Chile. I create some Ghost and
-    Wordpress themes for differents markets, also, i offer live support via our
-    ticket system.
-  </div>
+  <div class="aboutmeinfo-bottm">{{ aboutinfo.text }}</div>
 </div>

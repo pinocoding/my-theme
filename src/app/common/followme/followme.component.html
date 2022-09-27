@@ -4,64 +4,11 @@
   <div class="followme-tag-container">
     <div class="flex md:flex-wrap card-container purple-container">
       <div
+        *ngFor="let follow of follows"
         class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
       >
-        <div
-          class="followme-tag-twitter flex align-items-center justify-content-center"
-        >
-          <div
-            class="twitter-background flex align-items-center justify-content-center imgtransform"
-          >
-            <i class="fa-brands fa-twitter"></i>
-          </div>
-        </div>
+        <app-followmeitem [follow]="follow"></app-followmeitem>
       </div>
-
-      <div
-        class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
-      >
-        <div
-          class="followme-tag-facebook flex align-items-center justify-content-center"
-        >
-          <div
-            class="facebook-background flex align-items-center justify-content-center imgtransform"
-          >
-            <i class="fa-brands fa-facebook-f"></i>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
-      >
-        <div
-          class="followme-tag-instagram flex align-items-center justify-content-center"
-        >
-          <div
-            class="instagram-background flex align-items-center justify-content-center imgtransform"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div
-      class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
-    >
-      <div
-        class="followme-tag-rss flex align-items-center justify-content-center"
-      >
-        <div
-          class="rss-background flex align-items-center justify-content-center imgtransform"
-        >
-        <i class="fa-solid fa-rss"></i>
-        </div>
-      </div>
-    </div>
-
-
     </div>
   </div>
 </div>
