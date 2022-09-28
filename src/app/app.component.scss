@@ -8,8 +8,6 @@
 
 :host ::ng-deep .app {
   background-color: #f9f9f9;
-
-
 }
 
 // hoverstyle
@@ -42,5 +40,40 @@
     padding-top: 5px;
     background-color: #65ebe7;
     opacity: 1;
+  }
+}
+@media screen and (max-width: 767px) {
+  :host ::ng-deep .container {
+    .container-left {
+      width: 100% !important;
+    }
+    .container-right {
+      display: none;
+    }
+  }
+
+  :host ::ng-deep .p-datatable {
+    .p-datatable-tbody {
+      > tr {
+        padding: 25px 25px 40px !important;
+        margin-bottom: 50px !important;
+      }
+    }
+  }
+  :host ::ng-deep .card {
+    .card-head {
+      .card-head-left {
+        .card-head-img {
+          width: 85px !important;
+          height: 85px !important;
+          margin-right: 10px !important;
+        }
+      }
+      .card-head-right {
+        .card-content-top {
+          font-size: 18px !important;
+        }
+      }
+    }
   }
 }

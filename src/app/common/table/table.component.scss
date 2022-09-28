@@ -9,7 +9,6 @@
       flex-direction: column;
       margin-bottom: 70px;
       padding: 50px 70px;
-      max-width: 750px;
 
       -webkit-box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%),
         0 22px 27px -30px rgb(7 10 25 / 10%);
@@ -20,5 +19,23 @@
         padding: 0;
       }
     }
+  }
+}
+
+:host ::ng-deep .p-paginator {
+  background-color: transparent;
+  border: none;
+
+  .p-paginator-pages {
+    .p-paginator-page {
+      &.p-highlight {
+        background-color: #ff4c60;
+        color: white;
+      }
+    }
+  }
+  .p-paginator-first,
+  .p-paginator-last {
+    display: none !important;
   }
 }
