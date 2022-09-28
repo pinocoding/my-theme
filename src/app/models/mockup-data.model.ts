@@ -142,3 +142,113 @@ export const aboutinfos = [
     ],
   },
 ];
+
+export interface Card {
+  id: number;
+  title: string;
+  date: string;
+  img: string;
+  class: string;
+  text: string;
+  iconTag: string;
+  tagOne: string;
+  tagTwo: string;
+}
+
+export const cards = [
+  {
+    id: 1,
+    title: 'The spectacle before us was indeed sublime',
+    date: 'August 15, 2019',
+    img: 'tree.jpg',
+    class: 'small-man',
+    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
+    avatar: 'avatar.jpg',
+    name: 'Mary Buzard ',
+    iconTag: '#',
+    tagOne: 'Lifestyle',
+    tagTwo: 'Music',
+  },
+
+  {
+    id: 2,
+    title: 'The spectacle before us was indeed sublimes',
+    date: 'July 26, 2019',
+    img: 'man.jpg',
+    class: 'big-man',
+    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
+    avatar: 'avatar.jpg',
+    name: 'Mary Buzard ',
+    iconTag: '#',
+    tagOne: 'Lifestyle',
+    tagTwo: 'Music',
+  },
+
+  {
+    id: 3,
+    title: 'Musical improvisation is the spontaneous music',
+    date: ' August 15, 2019',
+    img: 'woman.jpg',
+    class: 'small-man',
+    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
+    avatar: 'avatar.jpg',
+    name: 'Mary Buzard ',
+    iconTag: '#',
+    tagOne: 'Lifestyle',
+    tagTwo: 'Music',
+  },
+  {
+    id: 4,
+    title: 'Far far away, behind the word mountains',
+    date: 'August 15, 2019',
+    img: 'tree.jpg',
+    class: 'small-man',
+    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
+    avatar: 'avatar.jpg',
+    name: 'Mary Buzard ',
+    iconTag: '#',
+    tagOne: 'Lifestyle',
+    tagTwo: 'Music',
+  },
+
+  {
+    id: 5,
+    title: 'The spectacle before us was indeed sublimes',
+    date: 'July 26, 2019',
+    img: 'man.jpg',
+    class: 'big-man',
+    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
+    avatar: 'avatar.jpg',
+    name: 'Mary Buzard ',
+    iconTag: '#',
+    tagOne: 'Lifestyle',
+    tagTwo: 'Music',
+  },
+
+  {
+    id: 6,
+    title: 'Musical improvisation is the spontaneous music',
+    date: ' August 15, 2019',
+    img: 'woman.jpg',
+    class: 'small-man',
+    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
+    avatar: 'avatar.jpg',
+    name: 'Mary Buzard ',
+    iconTag: '#',
+    tagOne: 'Lifestyle',
+    tagTwo: 'Music',
+  },
+  {
+    id: 7,
+    title: 'Far far away, behind the word mountains',
+    date: 'August 15, 2019',
+    img: 'tree.jpg',
+    class: 'small-man',
+    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
+    avatar: 'avatar.jpg',
+    name: 'Mary Buzard ',
+    iconTag: '#',
+    tagOne: 'Lifestyle',
+    tagTwo: 'Music',
+  },
+];

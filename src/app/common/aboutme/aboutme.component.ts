@@ -8,6 +8,5 @@ import { aboutinfos } from '../../models/mockup-data.model';
 export class AboutmeComponent implements OnInit {
   aboutinfos = aboutinfos;
   title = 'About me';
-  avatar = 'avatar.jpg';
   ngOnInit(): void {}
 }

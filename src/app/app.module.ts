@@ -18,7 +18,7 @@ import { ProductService } from './common/carousel/productservice';
 import { FooterComponent } from './common/footer/footer.component';
 import { SubcribeComponent } from './common/subcribe/subcribe.component';
 import { FooterbotComponent } from './common/footerbot/footerbot.component';
-
+import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
 
 import { CheckboxModule } from 'primeng/checkbox';
@@ -35,6 +35,7 @@ import { AboutmeComponent } from './common/aboutme/aboutme.component';
 import { AboutmeinfoComponent } from './common/aboutmeinfo/aboutmeinfo.component';
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { ArticlesideComponent } from './common/articleside/articleside.component';
+import { PaginatorModule } from 'primeng/paginator';
 
 import { SocialsideComponent } from './common/socialside/socialside.component';
 import { AdvertisingsideComponent } from './common/advertisingside/advertisingside.component';
@@ -42,6 +43,12 @@ import { BannerComponent } from './common/banner/banner.component';
 import { TagcloudsideComponent } from './common/tagcloudside/tagcloudside.component';
 import { TagcloudsideitemComponent } from './common/tagcloudsideitem/tagcloudsideitem.component';
 import { FollowmeitemComponent } from './common/followmeitem/followmeitem.component';
+import { ContainerComponent } from './common/container/container.component';
+import { CardComponent } from './common/card/card.component';
+import { TableComponent } from './common/table/table.component';
+import { TableModule } from 'primeng/table';
+import { FormsModule } from '@angular/forms';
+import { ButtonComponent } from './common/button/button.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +77,10 @@ import { FollowmeitemComponent } from './common/followmeitem/followmeitem.compon
     TagcloudsideComponent,
     TagcloudsideitemComponent,
     FollowmeitemComponent,
+    ContainerComponent,
+    CardComponent,
+    TableComponent,
+    ButtonComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +98,10 @@ import { FollowmeitemComponent } from './common/followmeitem/followmeitem.compon
     RippleModule,
     TabViewModule,
     InputTextModule,
+    CardModule,
+    PaginatorModule,
+    TableModule,
+    FormsModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],

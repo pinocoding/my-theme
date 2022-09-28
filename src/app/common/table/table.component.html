@@ -1,0 +1,21 @@
+<p-table [columns]="cols" [value]="cards" [paginator]="true" [rows]="3">
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        <!-- <div>{{ rowData[col.id] }} and {{ rowData[col.img] }}</div> -->
+        <app-card
+          [rowDataImg]="rowData[col.img]"
+          [rowDataTitle]="rowData[col.title]"
+          [rowDataDate]="rowData[col.date]"
+          [rowDataText]="rowData[col.text]"
+          [rowDataIconTag]="rowData[col.iconTag]"
+          [rowDataTagOne]="rowData[col.tagOne]"
+          [rowDataTagTwo]="rowData[col.tagTwo]"
+          [rowDataAvt]="rowData[col.avatar]"
+          [rowDataName]="rowData[col.name]"
+        ></app-card>
+      </td>
+      <app-button></app-button>
+    </tr>
+  </ng-template>
+</p-table>
