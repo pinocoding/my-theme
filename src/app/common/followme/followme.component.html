@@ -1,14 +1,18 @@
 <div class="followme-tag">
   <app-title [title]="title"></app-title>
 
-  <div class="followme-tag-container">
-    <div class="flex md:flex-wrap card-container purple-container">
-      <div
-        *ngFor="let follow of follows"
-        class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
-      >
-        <app-followmeitem [follow]="follow"></app-followmeitem>
-      </div>
+  <div class="grid followme-tag-container">
+    <div
+      *ngFor="let follow of follows"
+
+    >
+
+    <div class="followme-tag-item col-12 md:col-6 lg:col-3 border-round text-white" >
+
+      <app-followmeitem [follow]="follow"></app-followmeitem>
+
+    </div>
+
     </div>
   </div>
 </div>

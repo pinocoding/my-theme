@@ -74,6 +74,9 @@
         .header-button {
           margin-left: 0 !important;
         }
+        .header-search-button {
+          display: block;
+        }
       }
     }
   }
@@ -109,10 +112,25 @@
           margin-right: 10px !important;
         }
       }
+
       .card-head-right {
         .card-content-top {
-          font-size: 22px !important;
+          font-size: 18px !important;
         }
+      }
+    }
+    .card-body {
+      text-align: center;
+      margin: 20px 0 !important;
+      font-size: 14px !important;
+    }
+    .card-footer {
+      display: flex;
+      justify-content: center;
+
+      margin-bottom: 10px;
+      .footer-author {
+        display: none !important;
       }
     }
   }
@@ -123,6 +141,9 @@
       transition: 0.5s;
 
       .p-panelmenu {
+        .p-panelmenu-content {
+          border: none;
+        }
         .p-panelmenu-header {
           > a {
             border: none;
@@ -138,6 +159,73 @@
     &.active {
       margin-left: 540px;
       transition: 0.5s;
+    }
+  }
+  :host ::ng-deep.product-item {
+    position: relative;
+
+    .product-item-content {
+      text-align: center;
+    }
+
+    .product-image {
+      width: 100%;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0), 0 3px 6px rgba(0, 0, 0, 0);
+    }
+
+    .product-item-content-bottom {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      transform: translateY(-50%);
+
+      .product-item-content-infor {
+        margin: auto auto;
+        padding: 25px 40px;
+        text-align: center;
+      }
+    }
+  }
+
+  :host ::ng-deep .p-carousel {
+    .p-carousel-indicators {
+      display: none;
+    }
+    .p-carousel-prev,
+    .p-carousel-next {
+      display: none;
+    }
+  }
+  :host ::ng-deep .p-button {
+    &.p-button-icon-only {
+      &.p-button-rounded {
+        display: none;
+      }
+    }
+  }
+
+  :host ::ng-deep .footer {
+    .subcribe {
+      padding: 35px 25px !important;
+      h4 {
+        text-align: center;
+        font-size: 26px;
+        margin-bottom: 15px;
+      }
+      .subcribe-subtext {
+        font-size: 13px;
+      }
+    }
+    .footer-bottom {
+      padding: 0 20px !important;
+
+      .article-cart,
+      .tagcloud-cart,
+      .followme-tag,
+      .aboutme-tag {
+        padding: 0 !important;
+      }
     }
   }
 }
