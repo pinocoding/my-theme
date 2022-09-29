@@ -16,9 +16,9 @@
     </div>
 
     <div class="card-head-right">
-      <h4 class="card-content-top">
+      <span class="card-content-top buttontransform">
         {{ rowDataTitle }}
-      </h4>
+      </span>
       <div class="card-content-bottom">
         <span> {{ rowDataDate }}</span>
         <span> {{ rowDataTimeRead }} min read</span>
@@ -30,22 +30,14 @@
         >
       </div>
     </div>
-
-
   </div>
-
 
   <div class="card-content-date">
     <span> {{ rowDataDate }}</span>
     <span> {{ rowDataTimeRead }} min read</span>
-    <span>
-      <i class="pi pi-comment icon-color"></i> {{ rowDataComments }}</span
-    >
-    <span>
-      <i class="pi pi-comments icon-color"></i> {{ rowDataViews }}</span
-    >
+    <span> <i class="pi pi-comment icon-color"></i> {{ rowDataComments }}</span>
+    <span> <i class="pi pi-comments icon-color"></i> {{ rowDataViews }}</span>
   </div>
-
 
   <div class="card-body">{{ rowDataText }}</div>
   <div class="card-footer">
