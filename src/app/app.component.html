@@ -1,8 +1,14 @@
 <div class="app">
-  <app-header></app-header>
-  <app-carousel></app-carousel>
+  <app-menu-sidebar [opened]="sideBarOpen"></app-menu-sidebar>
+  <div class="home" [ngClass]="sideBarOpen ? 'home active' : ''">
+    <app-header
+      (toggleSidebarForMe)="sideBarToggler()"
+      [opened]="sideBarOpen"
+    ></app-header>
+    <app-carousel></app-carousel>
 
-  <app-container></app-container>
+    <app-container></app-container>
 
-  <app-footer></app-footer>
+    <app-footer></app-footer>
+  </div>
 </div>

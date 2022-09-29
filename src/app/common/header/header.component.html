@@ -1,4 +1,63 @@
 <div class="header">
-  <app-headerlogo></app-headerlogo>
-  <app-headernav></app-headernav>
+  <div class="header-logo">
+    <div
+      class="header-logo-container flex flex-wrap md:justify-content-between justify-content-center"
+    >
+      <div
+        class="header-logo-icon flex align-items-center justify-content-center"
+      >
+        <div
+          class="header-icon-container flex align-items-center justify-content-center"
+        >
+          <a href="">
+            <i
+              class="header-facebook-icon fa-brands fa-facebook-f buttontransform"
+            ></i>
+          </a>
+          <a href="">
+            <i
+              class="header-twitter-icon fa-brands fa-twitter buttontransform"
+            ></i>
+          </a>
+
+          <a href="">
+            <i
+              class="header-instagram-icon fa-brands fa-instagram buttontransform"
+            ></i>
+          </a>
+
+          <a href="">
+            <i class="header-rss-icon fa-solid fa-rss buttontransform"></i>
+          </a>
+        </div>
+
+        <div class="header-logo-menu" (click)="toggleSidebar()">
+          <i *ngIf="opened === false" class="pi pi-align-left"></i>
+          <i *ngIf="opened === true" class="pi pi-times"></i>
+        </div>
+      </div>
+      <div
+        class="header-title font-bold flex align-items-center justify-content-center buttontransform"
+      >
+        <span class="header-title-m title ularge black no-margin">M</span>aktub
+      </div>
+      <div
+        class="header-logo-search flex align-items-center justify-content-center onhover-one"
+      >
+        <button
+          pButton
+          icon="pi pi-search"
+          type="button"
+          class="header-button p-button-raised p-button-rounded buttontransform"
+        ></button>
+      </div>
+    </div>
+  </div>
+  <div class="header-nav">
+    <div
+      class="flex flex-wrap justify-content-center card-container blue-container gap-3"
+    >
+      <p-menubar [model]="items"></p-menubar>
+    </div>
+  </div>
 </div>

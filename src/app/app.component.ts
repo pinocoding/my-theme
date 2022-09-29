@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  sideBarOpen = false;
   title = 'my-theme';
+  sideBarToggler() {
+    this.sideBarOpen = !this.sideBarOpen;
+  }
 }

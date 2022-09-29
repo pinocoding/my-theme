@@ -8,9 +8,7 @@ import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HeaderlogoComponent } from './common/headerlogo/headerlogo.component';
 import { HeaderComponent } from './common/header/header.component';
-import { HeadernavComponent } from './common/headernav/headernav.component';
 import { CarouselModule } from 'primeng/carousel';
 import { CarouselComponent } from './common/carousel/carousel.component';
 import { ToastModule } from 'primeng/toast';
@@ -20,7 +18,7 @@ import { SubcribeComponent } from './common/subcribe/subcribe.component';
 import { FooterbotComponent } from './common/footerbot/footerbot.component';
 import { CardModule } from 'primeng/card';
 import { InputTextModule } from 'primeng/inputtext';
-
+import { PanelMenuModule } from 'primeng/panelmenu';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { RippleModule } from 'primeng/ripple';
@@ -36,7 +34,6 @@ import { AboutmeinfoComponent } from './common/aboutmeinfo/aboutmeinfo.component
 import { SidebarComponent } from './common/sidebar/sidebar.component';
 import { ArticlesideComponent } from './common/articleside/articleside.component';
 import { PaginatorModule } from 'primeng/paginator';
-
 import { SocialsideComponent } from './common/socialside/socialside.component';
 import { AdvertisingsideComponent } from './common/advertisingside/advertisingside.component';
 import { BannerComponent } from './common/banner/banner.component';
@@ -49,13 +46,11 @@ import { TableComponent } from './common/table/table.component';
 import { TableModule } from 'primeng/table';
 import { FormsModule } from '@angular/forms';
 import { ButtonComponent } from './common/button/button.component';
-
+import { MenuSidebarComponent } from './common/menu-sidebar/menu-sidebar.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HeaderlogoComponent,
-    HeadernavComponent,
     CarouselComponent,
     FooterComponent,
     SubcribeComponent,
@@ -70,7 +65,6 @@ import { ButtonComponent } from './common/button/button.component';
     AboutmeinfoComponent,
     SidebarComponent,
     ArticlesideComponent,
-
     SocialsideComponent,
     AdvertisingsideComponent,
     BannerComponent,
@@ -81,6 +75,7 @@ import { ButtonComponent } from './common/button/button.component';
     CardComponent,
     TableComponent,
     ButtonComponent,
+    MenuSidebarComponent,
   ],
   imports: [
     BrowserModule,
@@ -102,6 +97,7 @@ import { ButtonComponent } from './common/button/button.component';
     PaginatorModule,
     TableModule,
     FormsModule,
+    PanelMenuModule,
   ],
   providers: [ProductService],
   bootstrap: [AppComponent],

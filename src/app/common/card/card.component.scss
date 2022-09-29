@@ -9,7 +9,7 @@
 
     .card-head-left {
       .card-head-img {
-        width: 120px !important;
+        width: 120px;
         height: 120px;
         margin-right: 30px;
         object-fit: cover;
@@ -43,7 +43,6 @@
       flex-direction: column;
       justify-content: space-between;
       .card-content-top {
-        margin-top: -2px;
         font-size: 38px;
         line-height: 1.2;
         color: #454360;

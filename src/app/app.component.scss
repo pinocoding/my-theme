@@ -8,6 +8,8 @@
 
 :host ::ng-deep .app {
   background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
 }
 
 // hoverstyle
@@ -43,6 +45,44 @@
   }
 }
 @media screen and (max-width: 767px) {
+  :host ::ng-deep .header {
+    padding-top: 0px !important;
+
+    .header-logo {
+      .header-logo-container {
+        padding: 15px 20px;
+
+        justify-content: space-between !important;
+        .header-icon-container {
+          display: none !important;
+        }
+        .header-logo-menu {
+          display: block !important;
+
+          > i {
+            font-size: 31px;
+
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        .header-title {
+          font-size: 40px !important;
+        }
+
+        .header-button {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
+
+  :host ::ng-deep .header-nav {
+    .p-menubar {
+      display: none !important;
+    }
+  }
   :host ::ng-deep .container {
     .container-left {
       width: 100% !important;
@@ -71,9 +111,23 @@
       }
       .card-head-right {
         .card-content-top {
-          font-size: 18px !important;
+          font-size: 22px !important;
         }
       }
+    }
+  }
+  :host ::ng-deep .menu-sidebar {
+    &.active {
+      width: 350px;
+      transition: 0.5s;
+    }
+  }
+
+  :host ::ng-deep .home {
+    transition: 0.5s;
+    &.active {
+      margin-left: 650px;
+      transition: 0.5s;
     }
   }
 }
