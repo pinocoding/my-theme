@@ -104,6 +104,36 @@
     }
   }
   :host ::ng-deep .card {
+
+    .card-content-date {
+      margin-top: 10px;
+      display: block !important;
+      color: #596172;
+      font-size: 14px;
+      text-align: center;
+      > span {
+        padding: 0 10px;
+
+        .icon-color {
+          color: #ff4c60;
+        }
+      }
+      > span:first-child {
+        position: relative;
+        margin-left: -15px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 95%;
+          background-color: #ff4c60;
+          width: 15px;
+          height: 2px;
+        }
+      }
+    }
     .card-head {
       .card-head-left {
         .card-head-img {
@@ -113,9 +143,43 @@
         }
       }
 
+
+
       .card-head-right {
         .card-content-top {
+          margin-top: 20px;
           font-size: 18px !important;
+        }
+      }
+      .card-content-bottom {
+        display: none;
+      }
+    }
+    .big-guy {
+      display: block !important;
+
+      .card-head-left {
+        .card-head-img {
+          width: 100% !important;
+          height: 172px !important;
+          margin-right: 0px !important;
+          object-fit: cover;
+          background-repeat: no-repeat;
+          background-size: cover;
+          position: relative;
+        }
+      }
+      .card-head-right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .card-content-top {
+          margin: 10px;
+          font-size: 30px;
+        }
+        .card-content-bottom {
+          display: none;
+
         }
       }
     }

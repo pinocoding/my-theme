@@ -35,6 +35,10 @@ export class TableComponent implements OnInit {
         tagTwo: 'tagTwo',
         avatar: 'avatar',
         name: 'name',
+        timeRead: 'timeRead',
+        comments: 'comments',
+        views: 'views',
+        class: 'class'
       },
     ];
     this.totalRecords = this.cols.length;

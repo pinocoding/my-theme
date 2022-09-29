@@ -15,6 +15,17 @@ export class CardComponent implements OnInit {
   @Input() rowDataTagTwo: '';
   @Input() rowDataAvt: '';
   @Input() rowDataName: '';
+
+
+  @Input() rowDataTimeRead: '';
+  @Input() rowDataComments: '';
+  @Input() rowDataViews: '';
+  @Input() rowDataClass: '';
+
+
+
+
+
   constructor() {}
 
   ngOnInit(): void {}

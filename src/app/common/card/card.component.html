@@ -1,5 +1,5 @@
 <div class="card">
-  <div class="card-head">
+  <div class="card-head" [class]="rowDataClass">
     <div class="card-head-left">
       <div
         class="card-head-img"
@@ -20,10 +20,32 @@
         {{ rowDataTitle }}
       </h4>
       <div class="card-content-bottom">
-        {{ rowDataDate }}
+        <span> {{ rowDataDate }}</span>
+        <span> {{ rowDataTimeRead }} min read</span>
+        <span>
+          <i class="pi pi-comment icon-color"></i> {{ rowDataComments }}</span
+        >
+        <span>
+          <i class="pi pi-comments icon-color"></i> {{ rowDataViews }}</span
+        >
       </div>
     </div>
+
+
   </div>
+
+
+  <div class="card-content-date">
+    <span> {{ rowDataDate }}</span>
+    <span> {{ rowDataTimeRead }} min read</span>
+    <span>
+      <i class="pi pi-comment icon-color"></i> {{ rowDataComments }}</span
+    >
+    <span>
+      <i class="pi pi-comments icon-color"></i> {{ rowDataViews }}</span
+    >
+  </div>
+
 
   <div class="card-body">{{ rowDataText }}</div>
   <div class="card-footer">

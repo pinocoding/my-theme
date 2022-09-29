@@ -3,7 +3,9 @@
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-
+  .card-content-date {
+    display: none;
+  }
   .card-head {
     display: flex;
 
@@ -49,6 +51,54 @@
       }
       .card-content-bottom {
         color: #596172;
+
+        > span {
+          padding: 0 15px;
+
+          .icon-color {
+            color: #ff4c60;
+          }
+        }
+        > span:first-child {
+          position: relative;
+          margin-left: -15px;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 95%;
+            background-color: #ff4c60;
+            width: 20px;
+            height: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .big-guy {
+    display: block;
+
+    .card-head-left {
+      .card-head-img {
+        width: 100%;
+        height: 367px;
+        margin-right: 0px;
+        object-fit: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+      }
+    }
+    .card-head-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .card-content-top {
+        margin: 10px;
+        font-size: 30px;
       }
     }
   }
