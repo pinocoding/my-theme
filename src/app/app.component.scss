@@ -118,15 +118,25 @@
   }
   :host ::ng-deep .menu-sidebar {
     &.active {
-      width: 350px;
+      padding-top: 30px;
+      width: 270px;
       transition: 0.5s;
+
+      .p-panelmenu {
+        .p-panelmenu-header {
+          > a {
+            border: none;
+            background-color: #fff;
+          }
+        }
+      }
     }
   }
 
   :host ::ng-deep .home {
     transition: 0.5s;
     &.active {
-      margin-left: 650px;
+      margin-left: 540px;
       transition: 0.5s;
     }
   }
