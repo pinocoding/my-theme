@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 @Component({
   selector: 'app-header',
@@ -7,88 +8,32 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();
+  @Output() toggleSearchBarbarForMe: EventEmitter<any> = new EventEmitter();
   @Input() opened: boolean;
-  constructor() {}
-
+  constructor(private router: Router) {}
   items: MenuItem[] | any;
-
   ngOnInit() {
     this.items = [
       {
         label: 'Home',
-        items: [
-          {
-            label: 'New',
-
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'Header Styles',
-
-        items: [
-          {
-            label: 'New',
-
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: 'Post Features',
-
-        items: [
-          {
-            label: 'New',
-
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
-      {
-        label: '#Tag',
-
-        items: [
-          {
-            label: 'New',
-
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
+        routerLink: 'home',
       },
       {
         label: 'Author',
+        routerLink: 'author',
       },
 
-      {
-        label: 'Features',
-
-        items: [
-          {
-            label: 'New',
-
-            items: [{ label: 'Project' }, { label: 'Other' }],
-          },
-          { label: 'Open' },
-          { label: 'Quit' },
-        ],
-      },
       {
         label: 'Contact',
+        routerLink: 'contact',
       },
     ];
   }
 
   toggleSidebar() {
     this.toggleSidebarForMe.emit();
+  }
+  toggleSearchBar() {
+    this.toggleSearchBarbarForMe.emit();
   }
 }

@@ -1,0 +1,33 @@
+<div class="card author-container">
+  <div
+    class="flex justify-content-center flex-wrap card-container yellow-container"
+  >
+    <div class="flex align-items-center justify-content-center">
+      <div class="aboutme-tag align-items-center">
+        <div class="aboutmeinfo-tag" *ngIf="find_object">
+          <div class="aboutmeinfo-top">
+            <div class="aboutme-left imgtransition buttontransform">
+              <img
+                src="'../../assets/images/product/{{ find_object.img }}"
+                alt="images"
+              />
+            </div>
+
+            <div class="aboutme-right">
+              <p class="aboutme-right-name">
+                This is reading number :{{ find_object.id }}
+              </p>
+              <p class="aboutme-right-name">Author : {{ find_object.name }}</p>
+              <p class="aboutme-right-job">
+                {{ find_object.job }}
+              </p>
+            </div>
+          </div>
+          <div class="aboutmeinfo-bottm">
+            {{ find_object.text }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

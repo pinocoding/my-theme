@@ -1,0 +1,37 @@
+<div class="card author-container">
+  <div
+    class="flex justify-content-center flex-wrap card-container yellow-container"
+  >
+    <div class="flex align-items-center justify-content-center">
+      <div class="aboutme-tag align-items-center">
+        <div *ngFor="let aboutinfo of aboutinfos">
+          <div class="aboutmeinfo-tag">
+            <div class="aboutmeinfo-top">
+              <div class="aboutme-left imgtransition buttontransform">
+                <img
+                  src="../../assets/images/product/{{ aboutinfo.avatar }}"
+                  alt="images"
+                />
+              </div>
+
+              <div class="aboutme-right">
+                <p class="aboutme-right-name">{{ aboutinfo.name }}</p>
+                <p class="aboutme-right-job">{{ aboutinfo.job }}</p>
+              </div>
+            </div>
+            <div class="aboutmeinfo-bottm">{{ aboutinfo.text }}</div>
+            <div class="social-container">
+              <span *ngFor="let item of aboutinfo.link">
+                <i
+                  class="social-icon"
+                  [class]="item.icon"
+                  [style]="item.style"
+                ></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

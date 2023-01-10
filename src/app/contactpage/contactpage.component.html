@@ -1,0 +1,41 @@
+<h2>Contact</h2>
+<div class="google-map">
+  <p-gmap
+    [options]="options"
+    [overlays]="overlays"
+    [style]="{ width: '100%', height: '320px' }"
+  ></p-gmap>
+</div>
+<div class="form-container">
+  <div [formGroup]="form">
+    <div class="form-item">
+      <h5>Your name</h5>
+      <input pInputText formControlName="name" required />
+    </div>
+    <div class="form-item">
+      <h5>Your email</h5>
+      <input pInputText formControlName="email" required />
+    </div>
+
+    <div class="form-item">
+      <h5>Subject</h5>
+      <input pInputText formControlName="subject" required />
+    </div>
+    <div class="form-item">
+      <h5>Your message (optional)</h5>
+      <textarea
+        rows="5"
+        cols="30"
+        formControlName="messages"
+        pInputTextarea
+        class="form-item-message"
+      ></textarea>
+    </div>
+    <input
+      type="submit"
+      value="Submit"
+      class="submit-button"
+      (click)="form.reset()"
+    />
+  </div>
+</div>

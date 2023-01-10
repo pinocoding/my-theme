@@ -1,8 +1,191 @@
 <div class="sidebar">
   <div class="grid test">
-    <div class=""><app-articleside></app-articleside></div>
-    <div class=""><app-tagcloudside></app-tagcloudside></div>
-    <div class=""><app-socialside></app-socialside></div>
-    <div class=""><app-advertisingside></app-advertisingside></div>
+    <div class="articleside">
+      <app-title [title]="titleLists[4].title"></app-title>
+
+      <div *ngFor="let latestarticle of latestarticles">
+        <div class="art-info">
+          <div class="art-left">
+            <a
+              href="/readings/{{ latestarticle.id }}"
+              [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+            >
+              <div
+                class="art-img"
+                [ngStyle]="{
+                  'background-image':
+                    'url(./../../assets/images/product/' +
+                    latestarticle.img +
+                    ')'
+                }"
+              >
+                <img
+                  class="art-imgtest imgtransform"
+                  src="../../../assets/images/product/{{ latestarticle.img }}"
+                />
+              </div>
+            </a>
+          </div>
+
+          <div class="art-right">
+            <a
+              href="/readings/{{ latestarticle.id }}"
+              [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+            >
+              <h4 class="art-content-top">
+                <span class="buttontransform hover-underline">{{
+                  latestarticle.title
+                }}</span>
+              </h4>
+              <div class="art-content-bottom">
+                {{ latestarticle.date }}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="tagcloudside-tag">
+      <app-title [title]="titleLists[1].title"></app-title>
+      <div class="tagcloudsideitem">
+        <div class="tag-item buttontransform">
+          <a
+            href="https://vnexpress.net/the-thao"
+            [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+          >
+            <span class="tag-item-icon">#</span>Health
+          </a>
+        </div>
+        <div class="tag-item buttontransform">
+          <a
+            href="https://vnexpress.net/the-thao"
+            [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+          >
+            <span class="tag-item-icon">#</span>Lifestyle
+          </a>
+        </div>
+        <div class="tag-item buttontransform">
+          <a
+            href="https://vnexpress.net/the-thao"
+            [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+          >
+            <span class="tag-item-icon">#</span>Music
+          </a>
+        </div>
+        <div class="tag-item buttontransform">
+          <a
+            href="https://vnexpress.net/the-thao"
+            [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+          >
+            <span class="tag-item-buttontransform">#</span>Technology
+          </a>
+        </div>
+        <div class="tag-item buttontransform">
+          <a
+            href="https://vnexpress.net/the-thao"
+            [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+          >
+            <span class="tag-item-icon">#</span>Travel
+          </a>
+        </div>
+        <div class="tag-item buttontransform">
+          <a
+            href="https://vnexpress.net/the-thao"
+            [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+          >
+            <span class="tag-item-icon">#</span>Video
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="socialside">
+      <app-title [title]="titleLists[5].title"></app-title>
+
+      <div class="followme-tag-container">
+        <div class="flex md:flex-wrap card-container purple-container">
+          <div
+            class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
+          >
+            <div
+              class="followme-tag-twitter flex align-items-center justify-content-center"
+            >
+              <div
+                class="twitter-background flex align-items-center justify-content-center imgtransform"
+              >
+                <a
+                  href="https://twitter.com"
+                  [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+                >
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
+          >
+            <div
+              class="followme-tag-facebook flex align-items-center justify-content-center"
+            >
+              <div
+                class="facebook-background flex align-items-center justify-content-center imgtransform"
+              >
+                <a
+                  href="https://fabook.com"
+                  [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+                >
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
+          >
+            <div
+              class="followme-tag-instagram flex align-items-center justify-content-center"
+            >
+              <div
+                class="instagram-background flex align-items-center justify-content-center imgtransform"
+              >
+                <a
+                  href="https://instagram.com"
+                  [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+                >
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="followme-tag-item flex align-items-center justify-content-center font-bold text-white m-2 border-round"
+          >
+            <div
+              class="followme-tag-rss flex align-items-center justify-content-center"
+            >
+              <div
+                class="rss-background flex align-items-center justify-content-center imgtransform"
+              >
+                <a
+                  href="https://rss.com"
+                  [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+                >
+                  <i class="fa-solid fa-rss"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aboutme-tag">
+      <app-title [title]="titleLists[2].title"></app-title>
+      <div class="banner">
+        <img src="../../assets/images/product/banner.jpg" />
+      </div>
+    </div>
   </div>
 </div>

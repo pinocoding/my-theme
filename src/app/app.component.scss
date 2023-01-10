@@ -16,16 +16,9 @@
 :host ::ng-deep .buttontransform {
   cursor: pointer;
   transition: all 0.4s ease;
-
-  background-repeat: no-repeat;
-  padding-bottom: 5px;
-  background-position: left 70%;
   &:hover {
     transition: all 0.4s ease;
-
-    background-image: linear-gradient(#65ebe7 0%, #65ebe7 100%);
-    background-size: 100% 13%;
-    background-position: left 80%;
+    transform: translateY(-5px);
   }
 }
 :host ::ng-deep .imgtransform {
@@ -40,13 +33,18 @@
 }
 
 :host ::ng-deep .hover-underline {
-  position: relative;
+  cursor: pointer;
+  transition: all 0.4s ease;
 
+  background-repeat: no-repeat;
+  padding-bottom: 5px;
+  background-position: left 70%;
   &:hover {
-    cursor: pointer;
-    padding-top: 5px;
-    background-color: #65ebe7;
-    opacity: 1;
+    transition: all 0.4s ease;
+
+    background-image: linear-gradient(#65ebe7 0%, #65ebe7 100%);
+    background-size: 100% 13%;
+    background-position: left 80%;
   }
 }
 @media screen and (max-width: 767px) {
@@ -87,13 +85,15 @@
   }
 
   :host ::ng-deep .header-nav {
-    .p-menubar {
-      display: none !important;
-    }
+    display: none !important;
   }
+
   :host ::ng-deep .container {
     .container-left {
       width: 100% !important;
+      .author-container {
+        padding: 20px 20px;
+      }
     }
     .container-right {
       display: none;
@@ -199,33 +199,7 @@
       }
     }
   }
-  :host ::ng-deep .menu-sidebar {
-    &.active {
-      padding-top: 30px;
-      width: 270px;
-      transition: 0.5s;
 
-      .p-panelmenu {
-        .p-panelmenu-content {
-          border: none;
-        }
-        .p-panelmenu-header {
-          > a {
-            border: none;
-            background-color: #fff;
-          }
-        }
-      }
-    }
-  }
-
-  :host ::ng-deep .home {
-    transition: 0.5s;
-    &.active {
-      margin-left: 470px;
-      transition: 0.5s;
-    }
-  }
   :host ::ng-deep.product-item {
     position: relative;
 
@@ -293,4 +267,40 @@
       }
     }
   }
+  :host ::ng-deep .menu-sidebar {
+    &.active {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 50%;
+      z-index: 99;
+      width: 70%;
+      .p-panelmenu {
+        .p-panelmenu-content {
+          border: none;
+        }
+        .p-panelmenu-header {
+          > a {
+            border: none;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+:host ::ng-deep .container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+:host
+  ::ng-deep
+  .p-tabmenu
+  .p-tabmenu-nav
+  .p-tabmenuitem.p-highlight
+  .p-menuitem-link {
+  outline: 0;
+  box-shadow: unset !important;
 }

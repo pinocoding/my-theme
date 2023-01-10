@@ -1,0 +1,89 @@
+:host ::ng-deep .menu-sidebar {
+  &.active {
+    padding-top: 30px;
+    width: 270px;
+    transition: 0.5s;
+
+    .p-panelmenu {
+      .p-panelmenu-content {
+        border: none;
+      }
+      .p-panelmenu-header {
+        > a {
+          border: none;
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+:host ::ng-deep .home {
+  transition: 0.5s;
+  &.active {
+    margin-left: 470px;
+    transition: 0.5s;
+  }
+}
+:host ::ng-deep .container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+.author-container {
+  max-width: 1240px;
+  position: relative;
+  background: #ffffff;
+  color: #495057;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  margin: 30px auto;
+  padding: 50px 70px;
+  box-shadow: 0 3px 12px -1px rgb(7 10 25 / 10%),
+    0 22px 27px -30px rgb(7 10 25 / 10%);
+}
+
+:host ::ng-deep .aboutmeinfo-tag {
+  .aboutmeinfo-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .aboutme-left {
+      width: 80px;
+      height: 80px;
+      margin-right: 15px;
+
+      > img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    .aboutme-right {
+      .aboutme-right-name {
+        font-size: 18px;
+        color: #454360;
+      }
+      .aboutme-right-job {
+        font-size: 12px;
+
+        color: #596172;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  .social-container {
+    display: flex;
+    justify-content: center;
+    .social-icon {
+      padding-left: 5px;
+    }
+  }
+
+  .aboutmeinfo-bottm {
+    max-width: 550px;
+    text-align: center;
+    line-height: 25px;
+    margin: 15px auto;
+    font-size: 16px;
+  }
+}

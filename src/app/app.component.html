@@ -1,14 +1,26 @@
-<div class="app">
-  <app-menu-sidebar [opened]="sideBarOpen"></app-menu-sidebar>
-  <div class="home" [ngClass]="sideBarOpen ? 'home active' : ''">
-    <app-header
-      (toggleSidebarForMe)="sideBarToggler()"
-      [opened]="sideBarOpen"
-    ></app-header>
-    <app-carousel></app-carousel>
-
-    <app-container></app-container>
-
-    <app-footer></app-footer>
+<app-header
+  (toggleSidebarForMe)="sideBarToggler()"
+  (toggleSearchBarbarForMe)="searchBarToggler()"
+  [opened]="searchBarOpen"
+  [opened]="sideBarOpen"
+></app-header>
+<app-menu-sidebar
+  [opened]="opened"
+  (toggleSidebarForMe)="sideBarToggler()"
+></app-menu-sidebar>
+<app-searchBar
+  [opened]="searchBarOpened"
+  (toggleSearchBarbarForMe)="searchBarToggler()"
+></app-searchBar>
+<app-carousel *ngIf="this.currentRouter !== '/author'"></app-carousel>
+<app-authorpage *ngIf="this.currentRouter === '/author'"></app-authorpage>
+<div class="grid container">
+  <div class="col-8 container-left">
+    <router-outlet *ngIf="this.currentRouter !== '/author'"></router-outlet>
+    <app-reading-container
+      *ngIf="this.currentRouter === '/author'"
+    ></app-reading-container>
   </div>
+  <div class="col container-right"><app-sidebar></app-sidebar></div>
 </div>
+<app-footer></app-footer>

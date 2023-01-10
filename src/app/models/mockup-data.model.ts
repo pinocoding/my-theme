@@ -1,9 +1,4 @@
-export interface LatestArticle {
-  id: number;
-  title: string;
-  date: string;
-  img: string;
-}
+// Gọi danh sách render giao diện articlecard component
 
 export const latestarticles = [
   {
@@ -28,66 +23,99 @@ export const latestarticles = [
   },
 ];
 
-export interface TagCloud {
-  id: number;
-  text: string;
-  icon: string;
-}
+export const titleLists = [
+  {
+    id: 1,
+    title: 'Latest Articles',
+  },
+
+  {
+    id: 2,
+    title: 'Tag Cloud',
+  },
+
+  {
+    id: 3,
+    title: 'Follow Me!',
+  },
+  {
+    id: 4,
+    title: 'About me',
+  },
+  {
+    id: 5,
+    title: 'Recent posts',
+  },
+  {
+    id: 6,
+    title: 'Social',
+  },
+  {
+    id: 7,
+    title: 'Advertising',
+  },
+];
+// Gọi danh sách render giao diện tagcloud component
+
 export const tagclouds = [
   {
     id: 1,
     text: 'Health',
     icon: '#',
+    link: 'https://vnexpress.net/the-thao',
   },
   {
     id: 2,
     text: 'Lifestyle',
     icon: '#',
+    link: 'https://vnexpress.net/the-thao',
   },
 
   {
     id: 3,
     text: 'Music',
     icon: '#',
+    link: 'https://vnexpress.net/the-thao',
   },
 
   {
     id: 4,
     text: 'Technology ',
     icon: '#',
+    link: 'https://vnexpress.net/the-thao',
   },
 
   {
     id: 5,
     text: 'Travel',
     icon: '#',
+    link: 'https://vnexpress.net/the-thao',
   },
 
   {
     id: 6,
     text: 'Video',
     icon: '#',
+    link: 'https://vnexpress.net/the-thao',
   },
 ];
 
-export interface Follow {
-  id: number;
-  icon: string;
-  classIconOutLine: string;
-  classIconBackGround: string;
-}
+// Gọi danh sách render giao diện follows
+
 export const follows = [
   {
     id: 1,
     icon: 'fa-brands fa-twitter',
     classIconOutLine: 'followme-tag-twitter',
     classIconBackGround: 'twitter-background',
+    link: 'https://twitter.com',
   },
   {
     id: 2,
     icon: 'fa-brands fa-facebook-f',
     classIconOutLine: 'followme-tag-facebook',
     classIconBackGround: 'facebook-background',
+    link: 'https://facebook.com',
   },
 
   {
@@ -95,6 +123,7 @@ export const follows = [
     icon: 'fa-brands fa-instagram',
     classIconOutLine: 'followme-tag-instagram',
     classIconBackGround: 'instagram-background',
+    link: 'https://instagram.com',
   },
 
   {
@@ -102,22 +131,11 @@ export const follows = [
     icon: 'fa-solid fa-rss',
     classIconOutLine: 'followme-tag-rss',
     classIconBackGround: 'rss-background',
+    link: 'https://https://rss.com',
   },
 ];
 
-export interface Social {
-  icon: string;
-  style: string;
-}
-
-export interface AboutInfo {
-  id: number;
-  avatar: string;
-  name: string;
-  job: string;
-  text: string;
-  link: Social[];
-}
+// Gọi danh sách render giao diện aboutme component
 
 export const aboutinfos = [
   {
@@ -140,139 +158,5 @@ export const aboutinfos = [
         style: 'color: #ff4c60',
       },
     ],
-  },
-];
-
-export interface Card {
-  id: number;
-  title: string;
-  date: string;
-  img: string;
-  class: string;
-  text: string;
-  iconTag: string;
-  tagOne: string;
-  tagTwo: string;
-  timeRead: number;
-  comments: number;
-  views: number;
-}
-
-export const cards = [
-  {
-    id: 1,
-    title: 'The spectacle before us was indeed sublime',
-    date: 'August 15, 2019',
-    img: 'tree.jpg',
-    class: 'small-guy',
-    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
-    avatar: 'lady.jpg',
-    name: 'Mary Buzard ',
-    iconTag: '#',
-    tagOne: 'Lifestyle',
-    tagTwo: 'Music',
-    timeRead: 1,
-    comments: 2,
-    views: 538,
-  },
-
-  {
-    id: 2,
-    title: 'The meaning of health has evolved over time',
-    date: 'July 26, 2019',
-    img: 'dumb.jpg',
-    class: 'big-guy',
-    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
-    avatar: 'avatar.jpg',
-    name: 'Jonathan Doe',
-    iconTag: '#',
-    tagOne: 'Lifestyle',
-    tagTwo: 'Music',
-    timeRead: 1,
-    comments: 2,
-    views: 538,
-  },
-
-  {
-    id: 3,
-    title: 'Musical improvisation is the spontaneous music',
-    date: ' August 15, 2019',
-    img: 'woman.jpg',
-    class: 'small-guy',
-    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
-    avatar: 'avatar.jpg',
-    name: 'Jonathan Doe',
-    iconTag: '#',
-    tagOne: 'Lifestyle',
-    tagTwo: 'Music',
-    timeRead: 1,
-    comments: 2,
-    views: 538,
-  },
-  {
-    id: 4,
-    title: 'Far far away, behind the word mountains',
-    date: 'August 15, 2019',
-    img: 'tree.jpg',
-    class: 'small-guy',
-    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
-    avatar: 'avatar.jpg',
-    name: 'Jonathan Doe',
-    iconTag: '#',
-    tagOne: 'Lifestyle',
-    tagTwo: 'Music',
-    timeRead: 1,
-    comments: 2,
-    views: 538,
-  },
-
-  {
-    id: 5,
-    title: 'The spectacle before us was indeed sublimes',
-    date: 'July 26, 2019',
-    img: 'dumb.jpg',
-    class: 'big-guy',
-    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
-    avatar: 'lady.jpg',
-    name: 'Mary Buzard ',
-    iconTag: '#',
-    tagOne: 'Lifestyle',
-    tagTwo: 'Music',
-    timeRead: 1,
-    comments: 2,
-    views: 538,
-  },
-
-  {
-    id: 6,
-    title: 'Musical improvisation is the spontaneous music',
-    date: ' August 15, 2019',
-    img: 'woman.jpg',
-    class: 'small-guy',
-    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
-    avatar: 'avatar.jpg',
-    name: 'Jonathan Doe',
-    iconTag: '#',
-    tagOne: 'Lifestyle',
-    tagTwo: 'Music',
-    timeRead: 1,
-    comments: 2,
-    views: 538,
-  },
-  {
-    id: 7,
-    title: 'Far far away, behind the word mountains',
-    date: 'August 15, 2019',
-    img: 'tree.jpg',
-    class: 'small-guy',
-    text: 'Welcome, it’s great to have you here. We know that first impressions are important, so we’ve populated your new site with some initial getting started posts that…',
-    avatar: 'avatar.jpg',
-    name: 'Jonathan Doe',
-    iconTag: '#',
-    tagOne: 'Lifestyle',
-    tagTwo: 'Music',
-    timeRead: 1,
-    comments: 2,
-    views: 538,
   },
 ];

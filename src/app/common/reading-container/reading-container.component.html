@@ -1,0 +1,114 @@
+<p-table [columns]="cols" [value]="cards" [paginator]="true" [rows]="3">
+  <ng-template pTemplate="body" let-rowData let-columns="columns">
+    <tr>
+      <td *ngFor="let col of columns">
+        <div class="card">
+          <div class="card-head" [class]="rowData[col.img]">
+            <div class="card-head-left">
+              <div
+                class="card-head-img"
+                [ngStyle]="{
+                  'background-image':
+                    'url(./../../assets/images/product/' +
+                    rowData[col.img] +
+                    ')'
+                }"
+              >
+                <a href="/readings/{{ rowData[col.id] }}"
+                  ><img
+                    class="card-head-imgtest imgtransform"
+                    src="../../../assets/images/product/{{ rowData[col.img] }}"
+                /></a>
+              </div>
+            </div>
+
+            <div class="card-head-right">
+              <span class="card-content-top buttontransform">
+                <a
+                  href="/readings/{{ rowData[col.id] }}"
+                  [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+                  >{{ rowData[col.title] }}</a
+                >
+              </span>
+              <div class="card-content-bottom">
+                <span> {{ rowData[col.date] }}</span>
+                <span> {{ rowData[col.timeRead] }} min read</span>
+                <span>
+                  <i class="pi pi-comment icon-color"></i>
+                  {{ rowData[col.comments] }}</span
+                >
+                <span>
+                  <i class="pi pi-comments icon-color"></i>
+                  {{ rowData[col.views] }}</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="card-content-date">
+            <span> {{ rowData[col.date] }}</span>
+            <span> {{ rowData[col.timeRead] }} min read</span>
+            <span>
+              <i class="pi pi-comment icon-color"></i>
+              {{ rowData[col.comments] }}</span
+            >
+            <span>
+              <i class="pi pi-comments icon-color"></i>
+              {{ rowData[col.views] }}</span
+            >
+          </div>
+
+          <div class="card-body">{{ rowData[col.text] }}</div>
+          <div class="card-footer">
+            <div
+              class="align-items-center card-container blue-container flex flex-wrap justify-content-between"
+            >
+              <div class="flex flex-wrap justify-content-start">
+                <div class="card-footer-tag">
+                  <p>
+                    <span>#</span>
+
+                    {{ rowData[col.tagOne] }}
+                  </p>
+                </div>
+                <div class="card-footer-tag">
+                  <p>
+                    <span>#</span>
+
+                    {{ rowData[col.tagTwo] }}
+                  </p>
+                </div>
+              </div>
+              <div
+                class="footer-author align-items-center flex flex-wrap justify-content-end"
+              >
+                <div class="footer-avatar">
+                  <img
+                    src="../../../assets/images/product/{{
+                      rowData[col.avatar]
+                    }}"
+                    alt=""
+                  />
+                </div>
+                <a
+                  href="/author"
+                  [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+                  ><div class="footer-author-name">
+                    {{ rowData[col.name] }}
+                  </div></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="coninue-button">
+          <a
+            href="/readings/{{ rowData[col.id] }}"
+            [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+            >Continue reading</a
+          >
+        </button>
+      </td>
+    </tr>
+  </ng-template>
+</p-table>

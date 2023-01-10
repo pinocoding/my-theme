@@ -1,4 +1,197 @@
 <div class="footer" style="margin-top: 50px">
-  <app-subcribe></app-subcribe>
-  <app-footerbot></app-footerbot>
+  <div class="subcribe">
+    <div
+      class="flex flex-wrap md:justify-content-center justify-content-center card-container"
+    >
+      <div
+        class="flex flex-column justify-content-between justify-content-center align-center"
+      >
+        <h4>Subscribe to <span>M</span>aktub</h4>
+        <p class="subcribe-subtext">
+          Get the latest posts delivered right to your email.
+        </p>
+        <div class="p-grid p-fluid subcribe-submit">
+          <div class="p-col-12 p-md-4">
+            <div class="p-inputgroup" [formGroup]="form">
+              <input
+                type="email"
+                pInputText
+                formControlName="email"
+                placeholder="Enter your email address"
+              />
+              <button
+                class="p-inputgroup-addon"
+                type="submit"
+                value="Submit"
+                (click)="form.reset()"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-wrap md:justify-content-center justify-content-center card-container"
+        >
+          <div class="flex align-items-center justify-content-center">
+            <div
+              class="subcribe-icon-container flex align-items-center justify-content-center"
+            >
+              <a class="icon" href="https://www.facebook.com/">
+                <i
+                  class="sub-facebook-icon fa-brands fa-facebook-f onhover-one buttontransform"
+                ></i>
+              </a>
+              <a class="icon" href="https://www.twitter.com/">
+                <i
+                  class="sub-twitter-icon fa-brands fa-twitter onhover-one buttontransform"
+                ></i>
+              </a>
+
+              <a class="icon" href="https://www.instagram.com/">
+                <i
+                  class="sub-instagram-icon fa-brands fa-instagram onhover-one buttontransform"
+                ></i>
+              </a>
+
+              <a class="icon" href="https://www.rss.com/">
+                <i
+                  class="sub-rss-icon fa-solid fa-rss onhover-one buttontransform"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom grid">
+    <div class="col-12 md:col-6 lg:col-3">
+      <div class="article-cart">
+        <app-title [title]="titleLists[0].title"></app-title>
+
+        <div *ngFor="let latestarticle of latestarticles">
+          <div class="art-info">
+            <div class="art-left">
+              <div
+                class="art-img"
+                [ngStyle]="{
+                  'background-image':
+                    'url(./../../assets/images/product/' +
+                    latestarticle.img +
+                    ')'
+                }"
+              >
+                <a
+                  href="/readings/{{ latestarticle.id }}"
+                  [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+                  ><img
+                    class="art-imgtest imgtransform"
+                    src="../../../assets/images/product/{{
+                      latestarticle.img
+                    }}"
+                /></a>
+              </div>
+            </div>
+
+            <div class="art-right">
+              <h4 class="art-content-top">
+                <span class="buttontransform hover-underline">
+                  <a
+                    href="/readings/{{ latestarticle.id }}"
+                    [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+                    >{{ latestarticle.title }}</a
+                  ></span
+                >
+              </h4>
+              <div class="art-content-bottom">
+                {{ latestarticle.date }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <div class="tagcloud-cart">
+        <app-title [title]="titleLists[1].title"></app-title>
+
+        <div class="tagcloud-tag">
+          <div
+            class="tag-item buttontransform"
+            *ngFor="let tagcloud of tagclouds"
+          >
+            <a
+              href="{{ tagcloud.link }}"
+              [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+            >
+              <span class="tag-item-icon">{{ tagcloud.icon }}</span
+              >{{ tagcloud.text }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 lg:col-3">
+      <div class="followme-tag">
+        <app-title [title]="titleLists[2].title"></app-title>
+
+        <div class="grid followme-tag-container">
+          <div *ngFor="let follow of follows">
+            <a href="{{ follow.link }}">
+              <div
+                class="followme-tag-item col-12 md:col-6 lg:col-3 border-round text-white"
+              >
+                <div
+                  class="flex align-items-center justify-content-center"
+                  [class]="follow.classIconOutLine"
+                >
+                  <div
+                    class="flex align-items-center justify-content-center imgtransform"
+                    [class]="follow.classIconBackGround"
+                  >
+                    <i [class]="follow.icon"></i>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-12 md:col-6 lg:col-3">
+      <div class="aboutme-tag">
+        <div [ngStyle]="{ padding: '50px 30px' }">
+          <app-title [title]="titleLists[3].title"></app-title>
+          <div *ngFor="let aboutinfo of aboutinfos">
+            <div class="aboutmeinfo-tag">
+              <div class="aboutmeinfo-top">
+                <div class="aboutme-left imgtransition buttontransform">
+                  <img
+                    src="../../assets/images/product/{{ aboutinfo.avatar }}"
+                    alt="images"
+                  />
+                </div>
+
+                <div class="aboutme-right">
+                  <p class="aboutme-right-name">{{ aboutinfo.name }}</p>
+                  <p class="aboutme-right-job">{{ aboutinfo.job }}</p>
+
+                  <span *ngFor="let item of aboutinfo.link">
+                    <i
+                      class="social-icon"
+                      [class]="item.icon"
+                      [style]="item.style"
+                    ></i>
+                  </span>
+                </div>
+              </div>
+              <div class="aboutmeinfo-bottm">{{ aboutinfo.text }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

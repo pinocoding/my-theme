@@ -1,0 +1,15 @@
+:host ::ng-deep .searchBar {
+  padding: 25px;
+  display: none;
+  &.active {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 99;
+  }
+}

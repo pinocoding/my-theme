@@ -1,0 +1,57 @@
+<div [ngClass]="opened ? 'searchBar active' : 'searchBar'">
+  <div
+    class="header-logo-menu"
+    (click)="toggleSidebar()"
+    style="text-align: right"
+  >
+    <i class="pi pi-times" style="font-size: 35px"></i>
+  </div>
+  <p-table
+    #dt1
+    [value]="cards"
+    dataKey="id"
+    [rows]="10"
+    [showCurrentPageReport]="true"
+    [rowsPerPageOptions]="[1, 2, 3]"
+    styleClass="p-datatable-customers p-datatable-gridlines"
+    [paginator]="false"
+    [globalFilterFields]="['name']"
+  >
+    <ng-template pTemplate="caption">
+      <div class="p-d-flex">
+        <span class="p-input-icon-left p-ml-auto">
+          <i class="pi pi-search"></i>
+          <input
+            pInputText
+            type="text"
+            (input)="dt1.filterGlobal(getEventValue($event), 'contains')"
+            placeholder="Search keyword"
+          />
+        </span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th>
+          <div class="p-d-flex p-jc-between p-ai-center">Name</div>
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-card>
+      <tr>
+        <td>
+          <a
+            href="/readings/{{ card.id }} "
+            [ngStyle]="{ color: 'inherit', 'text-decoration': 'none' }"
+            >{{ card.name }}</a
+          >
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="3">No customers found.</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

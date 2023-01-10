@@ -1,0 +1,28 @@
+h2 {
+  color: #4b4870;
+}
+.google-map {
+  margin: 30px 0;
+}
+.form-container {
+  .form-item {
+    margin-bottom: 24px;
+    .p-inputtext {
+      width: 100%;
+    }
+    .form-item-message {
+      min-height: 300px;
+    }
+  }
+}
+
+.submit-button {
+  padding: 12px 35px;
+  background-color: #ff4c60;
+  color: #ffffff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
