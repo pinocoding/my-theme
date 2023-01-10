@@ -162,33 +162,31 @@
 
     <div class="col-12 md:col-6 lg:col-3">
       <div class="aboutme-tag">
-        <div [ngStyle]="{ padding: '50px 30px' }">
-          <app-title [title]="titleLists[3].title"></app-title>
-          <div *ngFor="let aboutinfo of aboutinfos">
-            <div class="aboutmeinfo-tag">
-              <div class="aboutmeinfo-top">
-                <div class="aboutme-left imgtransition buttontransform">
-                  <img
-                    src="../../assets/images/product/{{ aboutinfo.avatar }}"
-                    alt="images"
-                  />
-                </div>
-
-                <div class="aboutme-right">
-                  <p class="aboutme-right-name">{{ aboutinfo.name }}</p>
-                  <p class="aboutme-right-job">{{ aboutinfo.job }}</p>
-
-                  <span *ngFor="let item of aboutinfo.link">
-                    <i
-                      class="social-icon"
-                      [class]="item.icon"
-                      [style]="item.style"
-                    ></i>
-                  </span>
-                </div>
+        <app-title [title]="titleLists[3].title"></app-title>
+        <div *ngFor="let aboutinfo of aboutinfos">
+          <div class="aboutmeinfo-tag">
+            <div class="aboutmeinfo-top">
+              <div class="aboutme-left imgtransition buttontransform">
+                <img
+                  src="../../assets/images/product/{{ aboutinfo.avatar }}"
+                  alt="images"
+                />
               </div>
-              <div class="aboutmeinfo-bottm">{{ aboutinfo.text }}</div>
+
+              <div class="aboutme-right">
+                <p class="aboutme-right-name">{{ aboutinfo.name }}</p>
+                <p class="aboutme-right-job">{{ aboutinfo.job }}</p>
+
+                <span *ngFor="let item of aboutinfo.link">
+                  <i
+                    class="social-icon"
+                    [class]="item.icon"
+                    [style]="item.style"
+                  ></i>
+                </span>
+              </div>
             </div>
+            <div class="aboutmeinfo-bottm">{{ aboutinfo.text }}</div>
           </div>
         </div>
       </div>
